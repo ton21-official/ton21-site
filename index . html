@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ton21 (T21) — Community Token on TON</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ton21 (T21) — limited 21M supply community token on TON for games, community and DeFi growth.">
+  <link rel="icon" href="t21_logo.png">
+  <style>
+    :root{--bg:#0b0f14;--card:#121621;--text:#e8eef6;--muted:#9fb0c3;--accent:#4dd0e1;--line:#1e2633}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    .wrap{max-width:980px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+    header img{width:40px;height:40px;border-radius:8px}
+    h1{font-size:28px;margin:0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+    .muted{color:var(--muted)}
+    a.button{display:inline-block;padding:10px 14px;border:1px solid var(--accent);border-radius:10px;text-decoration:none;color:var(--text)}
+    a.button:hover{background:#102129}
+    code{background:#0e141c;border:1px solid var(--line);padding:3px 6px;border-radius:6px}
+    footer{opacity:.75;margin-top:28px;border-top:1px solid var(--line);padding-top:12px;font-size:14px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="t21_logo.png" alt="T21">
+      <div>
+        <h1>Ton21 (T21)</h1>
+        <div class="muted">Limited 21,000,000 supply • TON blockchain</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h3>About</h3>
+        <p>Ton21 (T21) — community-driven token on TON. Utilities: community, games, DeFi growth.</p>
+        <p><b>Total supply:</b> 21,000,000<br><b>Decimals:</b> 9</p>
+      </section>
+
+      <section class="card">
+        <h3>Contract</h3>
+        <p class="muted">Token address (jetton):</p>
+        <p><code>EQBLgiPMLy982IMGgauqdX0Fe_N01arD-LhlKSfxBd8rzYRG</code></p>
+        <p class="muted">Add this address to your TON wallet or DEX (DeDust/STON) to find T21.</p>
+      </section>
+
+      <section class="card">
+        <h3>Links</h3>
+        <p><a class="button" href="https://t.me/Ton21_Army" target="_blank">Telegram</a></p>
+        <p><a class="button" href="https://github.com/VLADIMIRVLE/ton21_official" target="_blank">GitHub repo</a></p>
+        <p><a class="button" href="https://dedust.io/" target="_blank">Open DeDust</a></p>
+      </section>
+
+      <section class="card">
+        <h3>Roadmap (short)</h3>
+        <ul>
+          <li>Community &amp; content launch</li>
+          <li>DEX liquidity &amp; early adopters</li>
+          <li>Mini-apps &amp; game integrations</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer class="muted">
+      © Ton21 • This is an experimental community token. Do your own research.
+    </footer>
+  </div>
+</body>
+</html>
