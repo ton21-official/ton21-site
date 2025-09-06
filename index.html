@@ -4,68 +4,182 @@
   <meta charset="utf-8">
   <title>Ton21 (T21) — Community Token on TON</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ton21 (T21) — limited 21M supply community token on TON for games, community and DeFi growth.">
+  <meta name="description" content="Ton21 (T21) — limited 21,000,000 community-driven token on TON. Utilities: community, games, DeFi growth.">
   <link rel="icon" href="t21_logo.png">
+
+  <!-- OpenGraph / Telegram / Discord -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ton21 (T21) — community token on TON">
+  <meta property="og:description" content="Limited 21,000,000 supply • Utilities: community, games, DeFi growth">
+  <meta property="og:image" content="https://vladimirvle.github.io/t21_logo.png">
+  <meta property="og:url" content="https://vladimirvle.github.io/">
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ton21 (T21) — community token on TON">
+  <meta name="twitter:description" content="Limited 21,000,000 supply • Utilities: community, games, DeFi growth">
+  <meta name="twitter:image" content="https://vladimirvle.github.io/t21_logo.png">
+
   <style>
-    :root{--bg:#0b0f14;--card:#121621;--text:#e8eef6;--muted:#9fb0c3;--accent:#4dd0e1;--line:#1e2633}
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
-    .wrap{max-width:980px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
-    header img{width:40px;height:40px;border-radius:8px}
+    :root{
+      --bg:#0b1220; --bg2:#101a2f;
+      --card:#121b2d; --line:#243351; --accent:#3ec0ff;
+      --text:#e9f0ff; --muted:#a8b4d4;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; color:var(--text); font:16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background: radial-gradient(80% 120% at 80% 0%, #0e2341 0%, var(--bg) 55%) fixed;
+      min-height:100svh;
+    }
+    .wrap{max-width:980px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;gap:12px;margin:6px 0 20px}
+    header img{width:40px;height:40px;border-radius:10px;border:1px solid var(--line)}
     h1{font-size:28px;margin:0}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+    .sub{color:var(--muted);margin-top:6px}
+    .row{display:grid;grid-template-columns:repeat(3,minmax(260px,1fr));gap:14px;margin-top:18px}
     .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
     .muted{color:var(--muted)}
-    a.button{display:inline-block;padding:10px 14px;border:1px solid var(--accent);border-radius:10px;text-decoration:none;color:var(--text)}
-    a.button:hover{background:#102129}
-    code{background:#0e141c;border:1px solid var(--line);padding:3px 6px;border-radius:6px}
-    footer{opacity:.75;margin-top:28px;border-top:1px solid var(--line);padding-top:12px;font-size:14px}
+    a.button{display:inline-block;padding:10px 14px;border:1px solid var(--accent);border-radius:10px;
+      text-decoration:none;color:var(--text); margin-top:10px}
+    a.button:hover{background:#0f2b44}
+    .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;word-break:break-all}
+    footer{opacity:.75;margin:26px 0 10px;font-size:14px}
+    .lang{margin-left:auto;display:flex;gap:6px}
+    .lang button{background:transparent;color:var(--muted);border:1px solid var(--line);padding:6px 10px;border-radius:8px;cursor:pointer}
+    .lang button.active{color:var(--text);border-color:var(--accent)}
+    .list{padding-left:18px;margin:8px 0}
+    .pill{display:inline-block;padding:2px 8px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--muted)}
+    .copy{cursor:pointer;border:1px dashed var(--line);padding:8px;border-radius:8px}
+    .ok{color:#7fe39c}
+    @media (max-width:860px){ .row{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <img src="t21_logo.png" alt="T21">
+      <img src="t21_logo.png" alt="T21 logo">
       <div>
         <h1>Ton21 (T21)</h1>
-        <div class="muted">Limited 21,000,000 supply • TON blockchain</div>
+        <div class="sub" data-i="subtitle">Limited 21,000,000 supply • TON blockchain</div>
+      </div>
+      <div class="lang">
+        <button id="btn-en" class="active">EN</button>
+        <button id="btn-ru">RU</button>
       </div>
     </header>
 
-    <div class="grid">
+    <div class="row">
       <section class="card">
-        <h3>About</h3>
-        <p>Ton21 (T21) — community-driven token on TON. Utilities: community, games, DeFi growth.</p>
-        <p><b>Total supply:</b> 21,000,000<br><b>Decimals:</b> 9</p>
+        <div class="pill" data-i="aboutTitle">About</div>
+        <p data-i="aboutText">
+          Ton21 (T21) — community-driven token on TON. Utilities: community, games, DeFi growth.
+        </p>
+        <p><b data-i="total">Total supply:</b> 21,000,000</p>
+        <p><b data-i="dec">Decimals:</b> 9</p>
       </section>
 
       <section class="card">
-        <h3>Contract</h3>
-        <p class="muted">Token address (jetton):</p>
-        <p><code>EQBLgiPMLy982IMGgauqdX0Fe_N01arD-LhlKSfxBd8rzYRG</code></p>
-        <p class="muted">Add this address to your TON wallet or DEX (DeDust/STON) to find T21.</p>
+        <div class="pill" data-i="contractTitle">Contract</div>
+        <p class="muted" data-i="tokenAddr">Token address (jetton):</p>
+        <div id="addr" class="mono copy"
+             title="Click to copy">
+EQBLgiPMLy982IMGgauqdX0Fe_N01arD-LhlKSfxBd8rzYRG
+        </div>
+        <small id="copied" class="muted" style="display:none">✓ copied</small>
+        <p class="muted" style="margin-top:10px" data-i="howto">
+          Add this address to your TON wallet or DEX (DeDust/STON) to find T21.
+        </p>
       </section>
 
       <section class="card">
-        <h3>Links</h3>
-        <p><a class="button" href="https://t.me/Ton21_Army" target="_blank">Telegram</a></p>
-        <p><a class="button" href="https://github.com/VLADIMIRVLE/ton21_official" target="_blank">GitHub repo</a></p>
-        <p><a class="button" href="https://dedust.io/" target="_blank">Open DeDust</a></p>
-      </section>
-
-      <section class="card">
-        <h3>Roadmap (short)</h3>
-        <ul>
-          <li>Community &amp; content launch</li>
-          <li>DEX liquidity &amp; early adopters</li>
-          <li>Mini-apps &amp; game integrations</li>
-        </ul>
+        <div class="pill">Links</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <!-- TODO: подставь живую ссылку на твой Telegram -->
+          <a class="button" href="https://t.me/Ton21_Army" target="_blank" rel="noopener">Telegram</a>
+          <!-- Репозиторий сайта -->
+          <a class="button" href="https://github.com/VLADIMIRVLE/ton21-site" target="_blank" rel="noopener">GitHub repo</a>
+          <!-- TODO: подставь прямую ссылку на DeDust c контрактом -->
+          <a class="button" href="https://dedust.io/" target="_blank" rel="noopener" data-i="dedust">Open DeDust</a>
+          <!-- Кнопка WhitePaper — загрузить PDF в корень репо как t21_whitepaper.pdf -->
+          <a class="button" href="t21_whitepaper.pdf" target="_blank" rel="noopener" data-i="wp">WhitePaper (PDF)</a>
+        </div>
       </section>
     </div>
 
+    <section class="card" style="margin-top:14px">
+      <div class="pill" data-i="roadmapTitle">Roadmap (short)</div>
+      <ul class="list">
+        <li data-i="rm1">Community & content launch</li>
+        <li data-i="rm2">DEX liquidity & early adopters</li>
+        <li data-i="rm3">Mini-apps & game integrations</li>
+      </ul>
+    </section>
+
     <footer class="muted">
-      © Ton21 • This is an experimental community token. Do your own research.
+      © Ton21 • Experimental community token. DYOR.
     </footer>
   </div>
+
+  <script>
+    // Copy address
+    const addr = document.getElementById('addr');
+    const copied = document.getElementById('copied');
+    addr.addEventListener('click', async () => {
+      try{
+        await navigator.clipboard.writeText(addr.textContent.trim());
+        copied.style.display = 'inline';
+        copied.classList.add('ok');
+        setTimeout(()=>{copied.style.display='none'}, 1200);
+      }catch(e){}
+    });
+
+    // Simple i18n
+    const dict = {
+      ru:{
+        subtitle:"Ограниченное предложение — 21 000 000 • блокчейн TON",
+        aboutTitle:"О нас",
+        aboutText:"Ton21 (T21) — токен, управляемый сообществом в TON. Утилиты: сообщество, игры, рост DeFi.",
+        total:"Общее количество:",
+        dec:"Десятичные дроби:",
+        contractTitle:"Контракт",
+        tokenAddr:"Адрес токена (jetton):",
+        howto:"Добавьте адрес в свой TON-кошелёк или DEX (DeDust/STON), чтобы найти T21.",
+        dedust:"Открыть DeDust",
+        wp:"WhitePaper (PDF)",
+        roadmapTitle:"Дорожная карта (краткая)",
+        rm1:"Запуск сообщества и контента",
+        rm2:"Ликвидность на DEX и ранние последователи",
+        rm3:"Интеграции мини-приложений и игр"
+      },
+      en:{
+        subtitle:"Limited 21,000,000 supply • TON blockchain",
+        aboutTitle:"About",
+        aboutText:"Ton21 (T21) — community-driven token on TON. Utilities: community, games, DeFi growth.",
+        total:"Total supply:",
+        dec:"Decimals:",
+        contractTitle:"Contract",
+        tokenAddr:"Token address (jetton):",
+        howto:"Add this address to your TON wallet or DEX (DeDust/STON) to find T21.",
+        dedust:"Open DeDust",
+        wp:"WhitePaper (PDF)",
+        roadmapTitle:"Roadmap (short)",
+        rm1:"Community & content launch",
+        rm2:"DEX liquidity & early adopters",
+        rm3:"Mini-apps & game integrations"
+      }
+    };
+    const t = (lang)=>{
+      for(const [k,v] of Object.entries(dict[lang])){
+        const el = document.querySelectorAll(`[data-i="${k}"]`);
+        el.forEach(n=>n.textContent=v);
+      }
+      document.getElementById('btn-en').classList.toggle('active', lang==='en');
+      document.getElementById('btn-ru').classList.toggle('active', lang==='ru');
+      document.documentElement.lang = lang;
+    };
+    document.getElementById('btn-en').onclick=()=>t('en');
+    document.getElementById('btn-ru').onclick=()=>t('ru');
+  </script>
 </body>
 </html>
