@@ -1,310 +1,110 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ton21 (T21) — Community Token on TON</title>
-  <meta name="description" content="Ton21 (T21) — community-driven token on TON. Total supply 21,000,000; decimals 9." />
-  <link rel="icon" href="t21_logo.png" />
-  <meta property="og:title" content="Ton21 (T21)" />
-  <meta property="og:description" content="Community-driven token on TON • Total supply 21,000,000 • Decimals 9" />
-  <meta property="og:image" content="t21_logo.png" />
-  <meta name="theme-color" content="#0a84ff" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ton21 (T21) — Community Token</title>
+  <meta name="description" content="Ton21 (T21) — токен, управляемый сообществом на блокчейне TON. Total supply 21,000,000 T21.">
+  <link rel="icon" href="t21_logo.png">
   <style>
-    :root{
-      --bg:#0b1220;--card:#121B2A;--line:#1f2a3a;
-      --text:#e9eef5;--muted:#9fb0c8;--accent:#43b1ff;
-      --ok:#2ecc71;--err:#ff5252
+    body {
+      margin:0; font-family:Arial, sans-serif; background:#0b1220; color:#e9eef5;
+      line-height:1.6;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--text);
-      font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:980px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;gap:12px;margin-bottom:18px}
-    header img{width:48px;height:48px;border-radius:10px;border:1px solid var(--line)}
-    h1{font-size:28px;margin:6px 0}
-    .lang{margin-left:auto;display:flex;gap:8px}
-    .lang button{background:transparent;border:1px solid var(--line);color:var(--muted);
-      padding:6px 10px;border-radius:8px;cursor:pointer}
-    .lang button.active{border-color:var(--accent);color:var(--text)}
-    .hero{display:grid;gap:12px;justify-items:center;text-align:center;margin-top:6px}
-    .btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-    .button{display:inline-block;padding:10px 12px;border:1px solid var(--line);
-      border-radius:10px}
-    .button.primary{border-color:var(--accent)}
-    .button:hover{border-color:var(--accent)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:16px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
-    .card h3{margin:4px 0 10px 0;font-size:15px;color:var(--muted)}
-    .muted{color:var(--muted)}
-    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
-    .addr{display:flex;gap:8px;background:#0f1726;border:1px solid var(--line);
-      border-radius:10px;padding:10px;overflow:auto;align-items:center}
-    .row{display:flex;gap:10px;flex-wrap:wrap}
-    .stack{display:grid;gap:10px}
-    .note{font-size:12px;color:var(--muted)}
-    .msg{margin-top:6px;font-size:14px}
-    .ok{color:var(--ok)} .err{color:var(--err)}
-    button[disabled]{opacity:.6;pointer-events:none}
-    /* tokenomics bars */
-    .bar{height:10px;background:#0f1726;border:1px solid var(--line);border-radius:999px;overflow:hidden}
-    .bar > i{display:block;height:100%;background:var(--accent)}
-    ul{padding-left:18px;margin:6px 0}
-    footer{opacity:.7;margin-top:26px;font-size:13px;text-align:center}
-    nav.anchor{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;justify-content:center}
-    nav.anchor a{font-size:14px;padding:6px 10px;border:1px solid var(--line);border-radius:8px}
-    nav.anchor a:hover{border-color:var(--accent)}
-    section:target{outline:2px solid var(--accent);scroll-margin-top:16px}
+    header { text-align:center; padding:40px 20px; }
+    header img { width:120px; }
+    h1 { margin:20px 0 10px; font-size:28px; }
+    .buttons { margin:20px 0; }
+    .button {
+      display:inline-block; padding:10px 16px; margin:5px;
+      background:#1f2a3a; color:#e9eef5; text-decoration:none;
+      border-radius:6px; transition:0.2s;
+    }
+    .button:hover { background:#2b3b52; }
+    .addr { background:#121b2a; padding:10px; border-radius:6px; word-break:break-all; }
+    .mono { font-family:monospace; }
+    section { padding:30px 20px; max-width:800px; margin:auto; }
+    h2 { margin-bottom:10px; }
+    .row { display:flex; flex-wrap:wrap; justify-content:center; }
+    .copy { cursor:pointer; background:#004aad; }
+    .copy:hover { background:#0060e0; }
+    .muted { font-size:14px; color:#aaa; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <!-- Header -->
-    <header>
-      <img src="t21_logo.png" alt="T21 logo" />
-      <div>
-        <h1>Ton21 (T21)</h1>
-        <div class="muted" data-i18n="tagline">Limited 21,000,000 supply • TON blockchain</div>
-      </div>
-      <div class="lang">
-        <button id="enBtn" class="active">EN</button>
-        <button id="ruBtn">RU</button>
-      </div>
-    </header>
 
-    <!-- Hero -->
-    <div class="hero">
-      <div class="btns">
-        <a class="button primary" href="https://t.me/Ton21_Army" target="_blank" rel="noopener">Telegram</a>
-        <a class="button" href="https://github.com/VLADIMIRVLE/ton21-site" target="_blank" rel="noopener">GitHub</a>
-        <a class="button" href="T21_WhitePaper_v2.pdf" target="_blank" rel="noopener" data-i18n="whitepaper">WhitePaper (PDF)</a>
-      </div>
+<header>
+  <img src="t21_logo.png" alt="T21 Logo">
+  <h1>Ton21 (T21)</h1>
+  <p>Токен, управляемый сообществом, на блокчейне TON</p>
+  <div class="buttons">
+    <a class="button" href="https://t.me/ton21_official" target="_blank">Телеграм</a>
+    <a class="button" href="https://github.com/VLADIMIRVLE/ton21-site" target="_blank">GitHub</a>
+    <a class="button" href="T21_WhitePaper_v2.pdf" target="_blank">Технический документ</a>
+  </div>
+</header>
 
-      <nav class="anchor">
-        <a href="#contract" data-i18n="navContract">Contract</a>
-        <a href="#about" data-i18n="navAbout">About</a>
-        <a href="#tokenomics" data-i18n="navTokenomics">Tokenomics</a>
-        <a href="#roadmap" data-i18n="navRoadmap">Roadmap</a>
-        <a href="#team" data-i18n="navTeam">Team</a>
-      </nav>
-    </div>
-
-    <!-- Contract -->
-    <section id="contract" class="card" style="margin-top:14px">
-      <h3 data-i18n="contractTitle">Contract</h3>
-      <div class="addr">
-        <span class="mono" id="addr">EQBLgiPMLy982IMGgauqdX0Fe_N01arD-LhlKSfxBd8rzYRG</span>
-        <a class="button" id="copyBtn" data-i18n="copy">Copy</a>
-      </div>
-      <div class="row" style="margin-top:10px">
-        <!-- jetton (viewer & scan) -->
-        <a class="button" href="https://tonviewer.com/jetton/EQBLgiPMLy982IMGgauqdX0Fe_N01arD-LhlKSfxBd8rzYRG" target="_blank" rel="noopener" data-i18n="openTVJetton">Tonviewer (jetton)</a>
-        <a class="button" href="https://tonscan.org/jetton/EQBLgiPMLy982IMGgauqdX0Fe_N01arD-LhlKSfxBd8rzYRG" target="_blank" rel="noopener" data-i18n="openTSJetton">Tonscan (jetton)</a>
-        <!-- address (wallet/holders view) -->
-        <a class="button" href="https://tonviewer.com/EQBLgiPMLy982IMGgauqdX0Fe_N01arD-LhlKSfxBd8rzYRG" target="_blank" rel="noopener" data-i18n="openTVAddr">Tonviewer (address)</a>
-        <a class="button" href="https://tonscan.org/address/EQBLgiPMLy982IMGgauqdX0Fe_N01arD-LhlKSfxBd8rzYRG" target="_blank" rel="noopener" data-i18n="openTSAddr">Tonscan (address)</a>
-        <!-- DEX -->
-        <a class="button primary" href="https://dedust.io/swap" target="_blank" rel="noopener" data-i18n="openDex">Open DeDust</a>
-      </div>
-      <p class="note" style="margin-top:8px" data-i18n="contractHint">
-        Add this address to your TON wallet or DEX to find T21. If a wallet shows “Unverified token” or $0 — that’s normal at an early stage; price will appear after liquidity.
-      </p>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="card" style="margin-top:14px">
-      <h3 data-i18n="aboutTitle">About</h3>
-      <p data-i18n="aboutText">
-        Ton21 (T21) — community-driven token on TON. Utilities: community, games, DeFi growth.
-      </p>
-      <p><b data-i18n="supply">Total supply</b>: 21,000,000 • <b data-i18n="decimals">Decimals</b>: 9</p>
-    </section>
-
-    <!-- Tokenomics -->
-    <section id="tokenomics" class="card" style="margin-top:14px">
-      <h3 data-i18n="tokenomicsTitle">Tokenomics</h3>
-      <div class="stack">
-        <div>
-          <b>Liquidity (DEX + CEX) — 35%</b>
-          <div class="bar"><i style="width:35%"></i></div>
-        </div>
-        <div>
-          <b data-i18n="teamDev">Team & Development — 20%</b>
-          <div class="bar"><i style="width:20%"></i></div>
-        </div>
-        <div>
-          <b data-i18n="partnersEco">Partnerships & Ecosystem — 25%</b>
-          <div class="bar"><i style="width:25%"></i></div>
-        </div>
-        <div>
-          <b data-i18n="airdropCom">Airdrop & Community — 15%</b>
-          <div class="bar"><i style="width:15%"></i></div>
-        </div>
-        <div>
-          <b data-i18n="reserve">Reserve — 5%</b>
-          <div class="bar"><i style="width:5%"></i></div>
-        </div>
-      </div>
-      <p class="note" data-i18n="tokenomicsNote">Vesting & distribution details will be announced to the community.</p>
-    </section>
-
-    <!-- Roadmap -->
-    <section id="roadmap" class="card" style="margin-top:14px">
-      <h3 data-i18n="roadmapTitle">Roadmap</h3>
-      <ul>
-        <li data-i18n="rm1">Community & content launch</li>
-        <li data-i18n="rm2">DEX liquidity & early adopters</li>
-        <li data-i18n="rm3">Mini-apps & game integrations</li>
-        <li data-i18n="rm4">Partnerships & ecosystem growth</li>
-      </ul>
-    </section>
-
-    <!-- Team -->
-    <section id="team" class="card" style="margin-top:14px">
-      <h3 data-i18n="teamTitle">Team</h3>
-      <p class="muted" data-i18n="teamText">Community-first project. Core contributors & advisors will be introduced step-by-step.</p>
-    </section>
-
-    <!-- Subscribe (optional, keep Formspree id) -->
-    <section class="card" style="margin-top:14px">
-      <h3 data-i18n="subTitle">Get updates</h3>
-      <p class="muted" data-i18n="subLead">Leave your email to receive important T21 updates (no spam).</p>
-      <form class="subscribe" id="subForm" method="POST" action="https://formspree.io/f/xwpnaleo">
-        <input type="email" name="email" placeholder="you@example.com" required />
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-        <input type="hidden" name="_subject" value="T21 Newsletter signup">
-        <button class="button primary" type="submit" data-i18n="subBtn">Subscribe</button>
-        <div class="note" data-i18n="subNote">By subscribing you agree to receive occasional emails about T21 news. You can unsubscribe any time.</div>
-        <div id="subMsg" class="msg"></div>
-      </form>
-    </section>
-
-    <footer>
-      © Ton21 • <span data-i18n="disclaimer">Experimental community token. DYOR.</span>
-    </footer>
+<section>
+  <h2>Контракт</h2>
+  <div class="addr">
+    <span class="mono" id="addr">EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG</span>
+    <a class="button copy" id="copyBtn">Копировать</a>
   </div>
 
-  <script>
-    // Copy address (two places can reuse this later if needed)
-    const tokenAddr = "EQBLgiPMLy982IMGgauqdX0Fe_N01arD-LhlKSfxBd8rzYRG";
-    const copyOnce = async (btn) => {
+  <div class="row" style="margin-top:10px">
+    <!-- Jetton -->
+    <a class="button" href="https://tonviewer.com/jetton/EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG" target="_blank">Tonviewer (jetton)</a>
+    <a class="button" href="https://tonscan.org/jetton/EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG" target="_blank">Tonscan (jetton)</a>
+    <!-- Address -->
+    <a class="button" href="https://tonviewer.com/EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG" target="_blank">Tonviewer (address)</a>
+    <a class="button" href="https://tonscan.org/address/EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG" target="_blank">Tonscan (address)</a>
+  </div>
+
+  <p class="muted">
+    Если Tonviewer показывает 404 — это нормально для новых контрактов. Используйте Tonscan, там контракт отобразится.
+  </p>
+</section>
+
+<section>
+  <h2>О нас</h2>
+  <p>
+    Ton21 (T21) — это токен сообщества с ограниченным предложением в 21,000,000 единиц.  
+    Его цель — развитие экосистемы TON, создание игр, DeFi и поддержки сообществ.
+  </p>
+</section>
+
+<section>
+  <h2>Tokenomics</h2>
+  <ul>
+    <li>💧 Liquidity (DEX + CEX): 35%</li>
+    <li>👥 Team & Development: 20%</li>
+    <li>🤝 Partnerships & Ecosystem: 25%</li>
+    <li>🎁 Airdrop & Community: 15%</li>
+    <li>🔒 Reserve: 5%</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Roadmap</h2>
+  <ul>
+    <li><b>Q3 2025:</b> Запуск сайта, whitepaper, первые листинги на DEX</li>
+    <li><b>Q4 2025:</b> Airdrop & маркетинг, партнерства, рост сообщества</li>
+    <li><b>2026:</b> CEX-листинг, запуск игр и DeFi-проектов на T21</li>
+  </ul>
+</section>
+
+<script>
+  const tokenAddr = "EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG";
+  const copyBtn = document.getElementById('copyBtn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async () => {
       try { await navigator.clipboard.writeText(tokenAddr); } catch(e){}
-      const old = btn.textContent;
-      btn.textContent = (currentLang==='ru') ? 'Скопировано' : 'Copied';
-      setTimeout(()=>btn.textContent = old, 1200);
-    };
-    document.getElementById('copyBtn').addEventListener('click', ()=>copyOnce(document.getElementById('copyBtn')));
+      const old = copyBtn.textContent;
+      copyBtn.textContent = 'Скопировано';
+      setTimeout(()=>copyBtn.textContent = old, 1200);
+    });
+  }
+</script>
 
-    // i18n dictionary
-    const dict = {
-      en:{
-        tagline:"Limited 21,000,000 supply • TON blockchain",
-        whitepaper:"WhitePaper (PDF)",
-        navContract:"Contract", navAbout:"About", navTokenomics:"Tokenomics", navRoadmap:"Roadmap", navTeam:"Team",
-        contractTitle:"Contract", copy:"Copy",
-        openTVJetton:"Tonviewer (jetton)", openTSJetton:"Tonscan (jetton)",
-        openTVAddr:"Tonviewer (address)", openTSAddr:"Tonscan (address)",
-        openDex:"Open DeDust",
-        contractHint:"Add this address to your TON wallet or DEX to find T21. If a wallet shows “Unverified token” or $0 — that’s normal at an early stage; price will appear after liquidity.",
-        aboutTitle:"About",
-        aboutText:"Ton21 (T21) — community-driven token on TON. Utilities: community, games, DeFi growth.",
-        supply:"Total supply", decimals:"Decimals",
-        tokenomicsTitle:"Tokenomics",
-        teamDev:"Team & Development — 20%",
-        partnersEco:"Partnerships & Ecosystem — 25%",
-        airdropCom:"Airdrop & Community — 15%",
-        reserve:"Reserve — 5%",
-        tokenomicsNote:"Vesting & distribution details will be announced to the community.",
-        roadmapTitle:"Roadmap",
-        rm1:"Community & content launch",
-        rm2:"DEX liquidity & early adopters",
-        rm3:"Mini-apps & game integrations",
-        rm4:"Partnerships & ecosystem growth",
-        teamTitle:"Team",
-        teamText:"Community-first project. Core contributors & advisors will be introduced step-by-step.",
-        subTitle:"Get updates",
-        subLead:"Leave your email to receive important T21 updates (no spam).",
-        subBtn:"Subscribe",
-        subNote:"By subscribing you agree to receive occasional emails about T21 news. You can unsubscribe any time.",
-        disclaimer:"Experimental community token. DYOR."
-      },
-      ru:{
-        tagline:"Ограниченное предложение 21 000 000 • блокчейн TON",
-        whitepaper:"Технический документ (PDF)",
-        navContract:"Контракт", navAbout:"О нас", navTokenomics:"Токеномика", navRoadmap:"Дорожная карта", navTeam:"Команда",
-        contractTitle:"Контракт", copy:"Скопировать",
-        openTVJetton:"Tonviewer (джеттон)", openTSJetton:"Tonscan (джеттон)",
-        openTVAddr:"Tonviewer (адрес)", openTSAddr:"Tonscan (адрес)",
-        openDex:"Открыть DeDust",
-        contractHint:"Добавьте этот адрес в кошелёк TON или DEX, чтобы найти T21. Если кошелёк показывает «Непроверенный токен» или $0 — это нормально на раннем этапе; цена появится после добавления ликвидности.",
-        aboutTitle:"О нас",
-        aboutText:"Ton21 (T21) — токен, управляемый сообществом в сети TON. Юзкейсы: комьюнити, игры, рост DeFi.",
-        supply:"Общее количество", decimals:"Десятичные дроби",
-        tokenomicsTitle:"Токеномика",
-        teamDev:"Команда и разработка — 20%",
-        partnersEco:"Партнёрства и экосистема — 25%",
-        airdropCom:"Эирдроп и сообщество — 15%",
-        reserve:"Резерв — 5%",
-        tokenomicsNote:"Подробности вестинга и распределения будут анонсированы для сообщества.",
-        roadmapTitle:"Дорожная карта",
-        rm1:"Запуск сообщества и контента",
-        rm2:"Ликвидность на DEX и ранние последователи",
-        rm3:"Интеграции мини-приложений и игр",
-        rm4:"Рост экосистемы и партнёрств",
-        teamTitle:"Команда",
-        teamText:"Проект ориентирован на комьюнити. Ключевые участники и советники будут представлены постепенно.",
-        subTitle:"Подписка на апдейты",
-        subLead:"Оставьте e-mail, чтобы получать важные новости T21 (без спама).",
-        subBtn:"Подписаться",
-        subNote:"Нажимая, вы соглашаетесь получать редкие письма о новостях T21. Отписаться можно в любой момент.",
-        disclaimer:"Экспериментальный токен сообщества. DYOR."
-      }
-    };
-
-    let currentLang = 'en';
-    const apply = (lang) => {
-      currentLang = lang;
-      const d = dict[lang];
-      document.querySelectorAll('[data-i18n]').forEach(el=>{
-        const k = el.getAttribute('data-i18n');
-        if (d[k]) el.textContent = d[k];
-      });
-      document.getElementById('enBtn').classList.toggle('active', lang==='en');
-      document.getElementById('ruBtn').classList.toggle('active', lang==='ru');
-      document.documentElement.lang = lang;
-    };
-    document.getElementById('enBtn').addEventListener('click', ()=>apply('en'));
-    document.getElementById('ruBtn').addEventListener('click', ()=>apply('ru'));
-    apply('en');
-
-    // Subscribe handler (Formspree)
-    const form = document.getElementById('subForm');
-    if (form){
-      const subMsg = document.getElementById('subMsg');
-      const submitBtn = form.querySelector('button[type="submit"]');
-      form.addEventListener('submit', async (e)=>{
-        e.preventDefault();
-        subMsg.textContent = '';
-        submitBtn.disabled = true;
-        try{
-          const res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
-          if(res.ok){
-            subMsg.textContent = (currentLang==='ru') ? 'Спасибо! Вы в списке.' : 'Thanks! You are on the list.';
-            subMsg.className='msg ok'; form.reset();
-          }else{
-            subMsg.textContent = (currentLang==='ru') ? 'Ошибка отправки. Попробуйте ещё раз.' : 'Submission error. Please try again.';
-            subMsg.className='msg err';
-          }
-        }catch(_){
-          subMsg.textContent = (currentLang==='ru') ? 'Сеть недоступна.' : 'Network error.';
-          subMsg.className='msg err';
-        }finally{
-          subMsg.scrollIntoView({behavior:'smooth', block:'center'});
-          submitBtn.disabled = false;
-        }
-      });
-    }
-  </script>
 </body>
 </html>
