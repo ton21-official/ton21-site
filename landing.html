@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ton21 (T21) – Community Token</title>
+  <meta name="description" content="Ton21 (T21) — community-driven token on TON blockchain. Limited 21,000,000 supply.">
+  <link rel="icon" href="t21_logo.png">
+  <style>
+    body {
+      margin: 0; font-family: Arial, sans-serif; background: #0b1220; color: #fff;
+    }
+    header {
+      text-align: center; padding: 40px 20px;
+    }
+    header img { width: 120px; }
+    header h1 { margin: 20px 0 10px; }
+    header p { color: #aaa; }
+    nav {
+      text-align: center; margin: 20px 0;
+    }
+    nav button {
+      background: #1f3a93; border: none; color: #fff; padding: 10px 20px;
+      margin: 5px; border-radius: 6px; cursor: pointer;
+    }
+    section {
+      max-width: 800px; margin: 40px auto; padding: 0 20px;
+    }
+    .contract-box {
+      background: #121b2a; border-radius: 8px; padding: 20px; text-align: center;
+    }
+    .copy-btn {
+      margin-top: 10px; padding: 6px 12px; border: none; border-radius: 4px;
+      cursor: pointer; background: #1f3a93; color: #fff;
+    }
+    footer {
+      text-align: center; padding: 20px; color: #888; font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="t21_logo.png" alt="T21 Logo">
+  <h1>Ton21 (T21)</h1>
+  <p>Community-driven token on TON blockchain</p>
+</header>
+
+<nav>
+  <a href="https://t.me/Ton21_Army" target="_blank"><button>Telegram</button></a>
+  <a href="https://github.com/VLADIMIRVLE/ton21-site" target="_blank"><button>GitHub</button></a>
+  <a href="T21_WhitePaper_v2.pdf" target="_blank"><button>WhitePaper</button></a>
+</nav>
+
+<section>
+  <h2>Contract</h2>
+  <div class="contract-box">
+    <p id="contract">EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG</p>
+    <button class="copy-btn" onclick="copyAddress()">Copy</button>
+    <div style="margin-top:10px;">
+      <a href="https://tonviewer.com/jetton/EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG" target="_blank"><button>Tonviewer</button></a>
+      <a href="https://tonscan.org/jetton/EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG" target="_blank"><button>Tonscan</button></a>
+      <a href="https://dedust.io" target="_blank"><button>DeDust</button></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>About</h2>
+  <p>Ton21 (T21) is a community token with a strictly limited supply of 21,000,000.  
+     The mission is to empower the TON ecosystem with scarcity, fairness, and decentralization.</p>
+</section>
+
+<section>
+  <h2>Roadmap</h2>
+  <ul>
+    <li>Q3 2025 — Community launch & listings</li>
+    <li>Q4 2025 — Marketing & partnerships</li>
+    <li>Q1 2026 — CEX listings & utilities</li>
+    <li>Q2 2026 — Global adoption push</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Ton21 (T21). Community Token on TON.
+</footer>
+
+<script>
+function copyAddress() {
+  const addr = document.getElementById("contract").innerText;
+  navigator.clipboard.writeText(addr).then(() => {
+    alert("Copied: " + addr);
+  });
+}
+</script>
+
+</body>
+</html>
