@@ -1,34 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ton21 (T21) — Community Token</title>
+  <title>Ton21 (T21) | Community Token</title>
   <meta name="description" content="Ton21 (T21) — community-driven token on TON blockchain. Total supply 21,000,000 T21.">
   <link rel="icon" href="t21_logo.png">
   <style>
     body {
-      margin:0; font-family:Arial, sans-serif; background:#0b1220; color:#e9eef5; line-height:1.6;
+      margin: 0; font-family: Arial, sans-serif;
+      background: #0b1220; color: #9eef5; line-height: 1.6;
     }
-    header { text-align:center; padding:40px 20px; }
-    header img { width:120px; }
-    h1 { margin:20px 0 10px; font-size:28px; }
-    .buttons { margin:20px 0; }
+    header { text-align: center; padding: 40px 20px; }
+    header img { width: 120px; }
+    h1 { margin: 20px 0 10px; font-size: 28px; }
+    .buttons { margin: 20px 0; }
     .button {
-      display:inline-block; padding:10px 16px; margin:5px;
-      background:#1f2a3a; color:#e9eef5; text-decoration:none;
-      border-radius:6px; transition:0.2s;
+      display: inline-block; padding: 10px 16px; margin: 5px;
+      background: #1f2a3a; color: #9eef5; text-decoration: none;
+      border-radius: 6px; transition: 0.25s;
     }
-    .button:hover { background:#2b3b52; }
-    .addr { background:#121b2a; padding:10px; border-radius:6px; word-break:break-all; }
-    .mono { font-family:monospace; }
-    section { padding:30px 20px; max-width:800px; margin:auto; }
-    h2 { margin-bottom:10px; }
-    .row { display:flex; flex-wrap:wrap; justify-content:center; }
-    .copy { cursor:pointer; background:#004aad; }
-    .copy:hover { background:#0060e0; }
-    .muted { font-size:14px; color:#aaa; }
-    #langSwitch { position:fixed; top:10px; right:10px; background:#1f2a3a; padding:8px 14px; border-radius:6px; cursor:pointer; }
+    .button:hover { background: #2b3b52; }
+    .addr { background: #112b4a; padding: 10px; border-radius: 6px; word-break: break-all; }
+    .mono { font-family: monospace; }
+    section { padding: 30px 20px; max-width: 800px; margin: auto; }
+    h2 { margin-bottom: 10px; }
+    .row { display: flex; flex-wrap: wrap; justify-content: center; }
+    .copy { cursor: pointer; background: #0044aa; color: #fff; border: none; border-radius: 6px; padding: 8px 14px; }
+    .copy:hover { background: #0066ee; }
+    .muted { font-size: 14px; color: #aaa; }
+    #langSwitch {
+      position: fixed; top: 10px; right: 10px;
+      background: #1f2a3a; padding: 8px 14px;
+      border-radius: 6px; cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -40,30 +45,20 @@
   <h1 id="title">Ton21 (T21)</h1>
   <p id="subtitle"></p>
   <div class="buttons">
-  <a class="button" id="btnTelegram" href="https://t.me/Ton21_Army" target="_blank">Телеграм</a>
-  <a class="button" id="btnGitHub" href="https://github.com/VLADIMIRVLE/ton21-site" target="_blank">GitHub</a>
-  <a href="T21_WhitePaper_v3.pdf" target="_blank">WhitePaper v3</a>
-
-  <a class="button" id="btnTwitter" href="https://twitter.com/Ton21Official" target="_blank">Twitter</a>
-  <a class="button" id="btnDiscord" href="https://discord.gg/HFJKrrtj" target="_blank">Discord</a>
-  <a class="button" id="btnDyor" href="https://dyor.io" target="_blank">Dyor.io</a>
-</div>
-
+    <a class="button" id="btnTelegram" href="https://t.me/Ton21_Army" target="_blank">Telegram</a>
+    <a class="button" id="btnGitHub" href="https://github.com/VLADIMIRVLE/ton21-site" target="_blank">GitHub</a>
+    <a class="button" id="btnWhitePaper" href="T21_WhitePaper_v3_polished.md" target="_blank">WhitePaper v3</a>
+    <a class="button" id="btnTwitter" href="https://twitter.com/Ton21Official" target="_blank">Twitter</a>
+    <a class="button" id="btnDiscord" href="https://discord.gg/HJxrrtj" target="_blank">Discord</a>
+  </div>
 </header>
 
 <section>
   <h2 id="contractTitle"></h2>
   <div class="addr">
     <span class="mono" id="addr">EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG</span>
-    <a class="button copy" id="copyBtn"></a>
+    <button class="copy" id="copyBtn">Copy</button>
   </div>
-
-  <div class="row" style="margin-top:10px">
-    <a class="button" href="https://tonviewer.com/jetton/EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG" target="_blank">Tonviewer</a>
-    <a class="button" href="https://tonscan.org/jetton/EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG" target="_blank">Tonscan</a>
-    <a class="button" href="https://dedust.io" target="_blank">DeDust</a>
-  </div>
-
   <p class="muted" id="note"></p>
 </section>
 
@@ -76,10 +71,10 @@
   <h2>Tokenomics</h2>
   <ul>
     <li>💧 Liquidity (DEX + CEX): 35%</li>
-    <li>👥 Team & Development: 20%</li>
+    <li>🧑‍🤝‍🧑 Team & Development: 20%</li>
     <li>🤝 Partnerships & Ecosystem: 25%</li>
     <li>🎁 Airdrop & Community: 15%</li>
-    <li>🔒 Reserve: 5%</li>
+    <li>📦 Reserve: 5% (locked until 20.05.2035)</li>
   </ul>
 </section>
 
@@ -89,38 +84,31 @@
 </section>
 
 <script>
-  const tokenAddr = "EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG";
-
-  // словарь переводов
   const texts = {
     ru: {
-      subtitle: "Токен, управляемый сообществом, на блокчейне TON",
-      btnTelegram: "Телеграм",
-      btnWhitePaper: "Технический документ",
+      subtitle: "Токен сообщества на блокчейне TON. Эмиссия: 21,000,000 T21.",
+      btnWhitePaper: "WhitePaper v3",
       contractTitle: "Контракт",
       copy: "Копировать",
       note: "Если Tonviewer показывает 404 — используйте Tonscan.",
       aboutTitle: "О нас",
-      aboutText: "Ton21 (T21) — это токен сообщества с ограниченным предложением в 21,000,000 единиц. Его цель — развитие экосистемы TON, создание игр, DeFi и поддержки сообществ.",
+      aboutText: "Ton21 (T21) — это токен сообщества с ограниченной эмиссией 21,000,000 единиц.",
       roadmap: [
-        "<b>Q3 2025:</b> Запуск сайта, whitepaper, первые листинги на DEX",
-        "<b>Q4 2025:</b> Airdrop & маркетинг, партнерства, рост сообщества",
-        "<b>2026:</b> CEX-листинг, запуск игр и DeFi-проектов на T21"
+        "<b>2025:</b> Запуск сайта, WhitePaper v3, листинги на DEX",
+        "<b>2026:</b> Листинг на CEX, запуск игр и DeFi-проектов с T21"
       ]
     },
     en: {
-      subtitle: "A community-driven token on TON blockchain",
-      btnTelegram: "Telegram",
-      btnWhitePaper: "WhitePaper",
+      subtitle: "A community-driven token on TON blockchain. Total supply: 21,000,000 T21.",
+      btnWhitePaper: "WhitePaper v3",
       contractTitle: "Contract",
       copy: "Copy",
-      note: "If Tonviewer shows 404 — use Tonscan instead.",
+      note: "If Tonviewer shows 404 — use Tonscan.",
       aboutTitle: "About",
-      aboutText: "Ton21 (T21) is a community token with a fixed supply of 21,000,000. Its mission is to grow the TON ecosystem, build games, DeFi, and support communities.",
+      aboutText: "Ton21 (T21) is a community-driven token with fixed supply of 21,000,000 units.",
       roadmap: [
-        "<b>Q3 2025:</b> Website launch, whitepaper, first DEX listings",
-        "<b>Q4 2025:</b> Airdrop & marketing, partnerships, community growth",
-        "<b>2026:</b> CEX listing, launch of games and DeFi projects on T21"
+        "<b>2025:</b> Website launch, WhitePaper v3, DEX listings",
+        "<b>2026:</b> CEX listings, games & DeFi projects with T21"
       ]
     }
   };
@@ -130,7 +118,6 @@
   function renderLang(lang) {
     const t = texts[lang];
     document.getElementById("subtitle").innerHTML = t.subtitle;
-    document.getElementById("btnTelegram").innerHTML = t.btnTelegram;
     document.getElementById("btnWhitePaper").innerHTML = t.btnWhitePaper;
     document.getElementById("contractTitle").innerHTML = t.contractTitle;
     document.getElementById("copyBtn").innerHTML = t.copy;
@@ -145,6 +132,7 @@
       li.innerHTML = item;
       rm.appendChild(li);
     });
+
     document.getElementById("langSwitch").innerText = lang === "ru" ? "EN" : "RU";
   }
 
@@ -153,18 +141,19 @@
     renderLang(currentLang);
   });
 
-  // копирование адреса
+  // Копирование адреса
   const copyBtn = document.getElementById("copyBtn");
   copyBtn.addEventListener("click", async () => {
-    try { await navigator.clipboard.writeText(tokenAddr); } catch(e){}
-    const old = copyBtn.textContent;
-    copyBtn.textContent = currentLang === "ru" ? "Скопировано" : "Copied";
-    setTimeout(()=>copyBtn.textContent = old, 1200);
+    try {
+      await navigator.clipboard.writeText(document.getElementById("addr").innerText);
+      const old = copyBtn.textContent;
+      copyBtn.textContent = currentLang === "ru" ? "Скопировано!" : "Copied!";
+      setTimeout(() => copyBtn.textContent = old, 1200);
+    } catch (e) { alert("Ошибка копирования"); }
   });
 
-  // старт с русского
+  // запуск
   renderLang("ru");
 </script>
-
 </body>
 </html>
