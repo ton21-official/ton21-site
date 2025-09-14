@@ -9,7 +9,7 @@
   <style>
     body {
       margin: 0; font-family: Arial, sans-serif;
-      background: #0b1220; color: #9eef5; line-height: 1.6;
+      background: #f9fafc; color: #222; line-height: 1.6;
     }
     header { text-align: center; padding: 40px 20px; }
     header img { width: 120px; }
@@ -17,22 +17,28 @@
     .buttons { margin: 20px 0; }
     .button {
       display: inline-block; padding: 10px 16px; margin: 5px;
-      background: #1f2a3a; color: #9eef5; text-decoration: none;
+      background: #0066ee; color: #fff; text-decoration: none;
       border-radius: 6px; transition: 0.25s;
     }
-    .button:hover { background: #2b3b52; }
-    .addr { background: #112b4a; padding: 10px; border-radius: 6px; word-break: break-all; }
+    .button:hover { background: #004bb5; }
+    .addr {
+      background: #eef2f7; padding: 10px;
+      border-radius: 6px; word-break: break-all; margin-top: 10px;
+    }
     .mono { font-family: monospace; }
     section { padding: 30px 20px; max-width: 800px; margin: auto; }
     h2 { margin-bottom: 10px; }
     .row { display: flex; flex-wrap: wrap; justify-content: center; }
-    .copy { cursor: pointer; background: #0044aa; color: #fff; border: none; border-radius: 6px; padding: 8px 14px; }
-    .copy:hover { background: #0066ee; }
-    .muted { font-size: 14px; color: #aaa; }
+    .copy {
+      cursor: pointer; background: #004aad; color: #fff;
+      border: none; border-radius: 6px; padding: 8px 14px;
+    }
+    .copy:hover { background: #0060e0; }
+    .muted { font-size: 14px; color: #666; }
     #langSwitch {
       position: fixed; top: 10px; right: 10px;
-      background: #1f2a3a; padding: 8px 14px;
-      border-radius: 6px; cursor: pointer;
+      background: #0066ee; color: #fff;
+      padding: 8px 14px; border-radius: 6px; cursor: pointer;
     }
   </style>
 </head>
