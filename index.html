@@ -1,159 +1,131 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ton21 (T21) | Community Token</title>
-  <meta name="description" content="Ton21 (T21) — community-driven token on TON blockchain. Total supply 21,000,000 T21.">
-  <link rel="icon" href="t21_logo.png">
   <style>
     body {
-      margin: 0; font-family: Arial, sans-serif;
-      background: #0b1220; color: #9eef5; line-height: 1.6;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa; /* светлый фон */
+      color: #222; /* тёмный текст */
+      line-height: 1.6;
     }
-    header { text-align: center; padding: 40px 20px; }
-    header img { width: 120px; }
-    h1 { margin: 20px 0 10px; font-size: 28px; }
-    .buttons { margin: 20px 0; }
-    .button {
-      display: inline-block; padding: 10px 16px; margin: 5px;
-      background: #1f2a3a; color: #9eef5; text-decoration: none;
-      border-radius: 6px; transition: 0.25s;
+
+    header {
+      background: #007bff;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
     }
-    .button:hover { background: #2b3b52; }
-    .addr { background: #112b4a; padding: 10px; border-radius: 6px; word-break: break-all; }
-    .mono { font-family: monospace; }
-    section { padding: 30px 20px; max-width: 800px; margin: auto; }
-    h2 { margin-bottom: 10px; }
-    .row { display: flex; flex-wrap: wrap; justify-content: center; }
-    .copy { cursor: pointer; background: #0044aa; color: #fff; border: none; border-radius: 6px; padding: 8px 14px; }
-    .copy:hover { background: #0066ee; }
-    .muted { font-size: 14px; color: #aaa; }
-    #langSwitch {
-      position: fixed; top: 10px; right: 10px;
-      background: #1f2a3a; padding: 8px 14px;
-      border-radius: 6px; cursor: pointer;
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h1, h2, h3 {
+      color: #111;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .contract-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #eef3f9;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-family: monospace;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      font-size: 14px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Ton21 (T21) Community Token</h1>
+    <p>21,000,000 фиксированное предложение на блокчейне TON</p>
+  </header>
 
-<div id="langSwitch">EN</div>
+  <div class="container">
+    <div class="card">
+      <h2>Контракт</h2>
+      <div class="contract-box">
+        <span id="contract">EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG</span>
+        <button class="btn" onclick="copyContract()">Копировать</button>
+      </div>
+      <p>Если TonViewer показывает 404 — используйте Tonscan.</p>
+    </div>
 
-<header>
-  <img src="t21_logo.png" alt="T21 Logo">
-  <h1 id="title">Ton21 (T21)</h1>
-  <p id="subtitle"></p>
-  <div class="buttons">
-    <a class="button" id="btnTelegram" href="https://t.me/Ton21_Army" target="_blank">Telegram</a>
-    <a class="button" id="btnGitHub" href="https://github.com/VLADIMIRVLE/ton21-site" target="_blank">GitHub</a>
-    <a class="button" id="btnWhitePaper" href="T21_WhitePaper_v3_polished.md" target="_blank">WhitePaper v3</a>
-    <a class="button" id="btnTwitter" href="https://twitter.com/Ton21Official" target="_blank">Twitter</a>
-    <a class="button" id="btnDiscord" href="https://discord.gg/HJxrrtj" target="_blank">Discord</a>
+    <div class="card">
+      <h2>О нас</h2>
+      <p>Ton21 (T21) — это токен сообщества с ограниченной эмиссией в 21,000,000 единиц.</p>
+    </div>
+
+    <div class="card">
+      <h2>Tokenomics</h2>
+      <ul>
+        <li>💧 Liquidity (DEX + CEX): 35%</li>
+        <li>👥 Team & Development: 20%</li>
+        <li>🤝 Partnerships & Ecosystem: 25%</li>
+        <li>🎁 Airdrop & Community: 15%</li>
+        <li>🔒 Reserve: 5% (locked until 20.05.2035)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Roadmap</h2>
+      <p>🚀 Q4 2025 — Запуск и листинг<br>
+         🌍 2026 — Расширение партнёрств<br>
+         🎮 2027 — Интеграция в игры и dApps<br>
+         📈 2028 — Дальнейший рост и CEX-листинги</p>
+    </div>
   </div>
-</header>
 
-<section>
-  <h2 id="contractTitle"></h2>
-  <div class="addr">
-    <span class="mono" id="addr">EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG</span>
-    <button class="copy" id="copyBtn">Copy</button>
-  </div>
-  <p class="muted" id="note"></p>
-</section>
+  <footer>
+    © 2025 Ton21 Community. Все права защищены.
+  </footer>
 
-<section>
-  <h2 id="aboutTitle"></h2>
-  <p id="aboutText"></p>
-</section>
-
-<section>
-  <h2>Tokenomics</h2>
-  <ul>
-    <li>💧 Liquidity (DEX + CEX): 35%</li>
-    <li>🧑‍🤝‍🧑 Team & Development: 20%</li>
-    <li>🤝 Partnerships & Ecosystem: 25%</li>
-    <li>🎁 Airdrop & Community: 15%</li>
-    <li>📦 Reserve: 5% (locked until 20.05.2035)</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Roadmap</h2>
-  <ul id="roadmap"></ul>
-</section>
-
-<script>
-  const texts = {
-    ru: {
-      subtitle: "Токен сообщества на блокчейне TON. Эмиссия: 21,000,000 T21.",
-      btnWhitePaper: "WhitePaper v3",
-      contractTitle: "Контракт",
-      copy: "Копировать",
-      note: "Если Tonviewer показывает 404 — используйте Tonscan.",
-      aboutTitle: "О нас",
-      aboutText: "Ton21 (T21) — это токен сообщества с ограниченной эмиссией 21,000,000 единиц.",
-      roadmap: [
-        "<b>2025:</b> Запуск сайта, WhitePaper v3, листинги на DEX",
-        "<b>2026:</b> Листинг на CEX, запуск игр и DeFi-проектов с T21"
-      ]
-    },
-    en: {
-      subtitle: "A community-driven token on TON blockchain. Total supply: 21,000,000 T21.",
-      btnWhitePaper: "WhitePaper v3",
-      contractTitle: "Contract",
-      copy: "Copy",
-      note: "If Tonviewer shows 404 — use Tonscan.",
-      aboutTitle: "About",
-      aboutText: "Ton21 (T21) is a community-driven token with fixed supply of 21,000,000 units.",
-      roadmap: [
-        "<b>2025:</b> Website launch, WhitePaper v3, DEX listings",
-        "<b>2026:</b> CEX listings, games & DeFi projects with T21"
-      ]
+  <script>
+    function copyContract() {
+      const contract = document.getElementById("contract").innerText;
+      navigator.clipboard.writeText(contract).then(() => {
+        alert("Контракт скопирован: " + contract);
+      });
     }
-  };
-
-  let currentLang = "ru";
-
-  function renderLang(lang) {
-    const t = texts[lang];
-    document.getElementById("subtitle").innerHTML = t.subtitle;
-    document.getElementById("btnWhitePaper").innerHTML = t.btnWhitePaper;
-    document.getElementById("contractTitle").innerHTML = t.contractTitle;
-    document.getElementById("copyBtn").innerHTML = t.copy;
-    document.getElementById("note").innerHTML = t.note;
-    document.getElementById("aboutTitle").innerHTML = t.aboutTitle;
-    document.getElementById("aboutText").innerHTML = t.aboutText;
-
-    const rm = document.getElementById("roadmap");
-    rm.innerHTML = "";
-    t.roadmap.forEach(item => {
-      const li = document.createElement("li");
-      li.innerHTML = item;
-      rm.appendChild(li);
-    });
-
-    document.getElementById("langSwitch").innerText = lang === "ru" ? "EN" : "RU";
-  }
-
-  document.getElementById("langSwitch").addEventListener("click", () => {
-    currentLang = currentLang === "ru" ? "en" : "ru";
-    renderLang(currentLang);
-  });
-
-  // Копирование адреса
-  const copyBtn = document.getElementById("copyBtn");
-  copyBtn.addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(document.getElementById("addr").innerText);
-      const old = copyBtn.textContent;
-      copyBtn.textContent = currentLang === "ru" ? "Скопировано!" : "Copied!";
-      setTimeout(() => copyBtn.textContent = old, 1200);
-    } catch (e) { alert("Ошибка копирования"); }
-  });
-
-  // запуск
-  renderLang("ru");
-</script>
+  </script>
 </body>
 </html>
