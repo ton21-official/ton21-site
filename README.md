@@ -1,34 +1,37 @@
-# 🌐 Ton21 Official Website  
+<p align="center">
+  <img src="t21_logo.png" alt="Ton21 Logo" width="200"/>
+</p>
 
-![T21 Logo](t21_logo.png)  
+# 🌐 Ton21 Official Website
 
-This is the official website repository for **Ton21 (T21)** — a community-driven token on the TON blockchain.  
-Powered by GitHub Pages.  
+This is the official website repository for **Ton21 (T21)** — a community-driven token on the TON blockchain with a strictly limited supply of **21,000,000 T21**.  
+Created for community growth, games, and DeFi on TON. 🚀
 
-🔗 **Website:** [https://vladimirvle.github.io/ton21-site/](https://vladimirvle.github.io/ton21-site/)  
+👉 Website: [vladimirvle.github.io/ton21-site](https://vladimirvle.github.io/ton21-site/)
 
 ---
 
 ## 📄 Documents
-- [T21 WhitePaper v3 (RU/EN)](https://github.com/VLADIMIRVLE/ton21_official/blob/main/T21_WhitePaper_v3_polished.md)  
-- [T21 Tokenomics v3 (RU/EN)](https://github.com/VLADIMIRVLE/ton21_official/blob/main/T21_Tokenomics_v3.md)  
+- [T21 WhitePaper v3 (EN/RU/CN)](T21_WhitePaper_v3_polished.md)  
+- [T21 Tokenomics v3 (RU/EN)](T21_Tokenomics_v3.md)
 
 ---
 
-## 📢 Community
-- Telegram: [Ton21 Army](https://t.me/Ton21_Army)  
+## 👥 Community
+- Telegram: [Ton21 Army (Official)](https://t.me/Ton21_Army)  
 - Twitter (X): [Ton21 Official](https://twitter.com/Ton21Official)  
+- Discord: [Join Discord](https://discord.gg/me2kuT9Pq)
 
 ---
 
 ## 🇷🇺 О проекте
 **Ton21 (T21)** — это токен сообщества на блокчейне TON с ограниченной эмиссией **21,000,000 T21**.  
-Создан для развития сообщества, игр и DeFi на TON.  
+Создан для развития сообщества, игр и DeFi на TON.
 
-📄 Документы:  
-- [T21 WhitePaper v3 (RU/EN)](https://github.com/VLADIMIRVLE/ton21_official/blob/main/T21_WhitePaper_v3_polished.md)  
-- [T21 Tokenomics v3 (RU/EN)](https://github.com/VLADIMIRVLE/ton21_official/blob/main/T21_Tokenomics_v3.md)  
+### 📄 Документы
+- [T21 WhitePaper v3 (RU/EN/CN)](T21_WhitePaper_v3_polished.md)  
+- [T21 Tokenomics v3 (RU/EN)](T21_Tokenomics_v3.md)
 
 ---
 
-⚡ Built with ❤️ by the Ton21 Team
+❤️ Built with love by the Ton21 Team
