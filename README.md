@@ -11,8 +11,14 @@ Created for community growth, games, and DeFi on TON. 🚀
 
 ---
 
-## 📄 Documents
-- [T21 WhitePaper v3 (EN/RU/CN)](T21_WhitePaper_v3_polished.md)  
+## 📄 WhitePaper v3 (Final)
+- [English Version (PDF)](Ton21_WhitePaper_v3_EN.pdf)  
+- [Русская версия (PDF)](Ton21_WhitePaper_v3_RU.pdf)  
+- [中文版本 (PDF)](Ton21_WhitePaper_v3_CN.pdf)  
+
+---
+
+## 📊 Tokenomics
 - [T21 Tokenomics v3 (RU/EN)](T21_Tokenomics_v3.md)
 
 ---
@@ -20,7 +26,13 @@ Created for community growth, games, and DeFi on TON. 🚀
 ## 👥 Community
 - Telegram: [Ton21 Army (Official)](https://t.me/Ton21_Army)  
 - Twitter (X): [Ton21 Official](https://twitter.com/Ton21Official)  
-- Discord: [Join Discord](https://discord.gg/me2kuT9Pq)
+- Discord: [Join Discord](https://discord.gg/me2kuT9Pq)  
+
+---
+
+## 🇬🇧 About the Project
+**Ton21 (T21)** is a community-driven token on the TON blockchain with a limited supply of **21,000,000 T21**.  
+It was created to support community growth, gaming, and DeFi on TON.
 
 ---
 
@@ -28,9 +40,17 @@ Created for community growth, games, and DeFi on TON. 🚀
 **Ton21 (T21)** — это токен сообщества на блокчейне TON с ограниченной эмиссией **21,000,000 T21**.  
 Создан для развития сообщества, игр и DeFi на TON.
 
-### 📄 Документы
-- [T21 WhitePaper v3 (RU/EN/CN)](T21_WhitePaper_v3_polished.md)  
-- [T21 Tokenomics v3 (RU/EN)](T21_Tokenomics_v3.md)
+---
+
+## 🇨🇳 关于项目
+**Ton21 (T21)** 是一个基于 TON 区块链的社区驱动型代币，总供应量为 **21,000,000 T21**。  
+它旨在支持社区发展、游戏和 TON 上的 DeFi。
+
+---
+
+## 🗂️ Archived Versions
+- [T21 WhitePaper v2 (PDF)](archive/T21_WhitePaper_v2.pdf)  
+- [T21 WhitePaper v3 Polished (Draft, RU/EN)](archive/T21_WhitePaper_v3_polished.md)  
 
 ---
 
