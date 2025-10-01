@@ -36,7 +36,7 @@ Created for community growth, games, and DeFi on TON. 🚀
 ---
 
 ## 📜 Contract
-- **Address:** `EQBLgiPMLy98ZIMGqauqdX0Fe_N01arD-Lh1KSfxBd8rzYRG`  
+- **Address:** `EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG`  
 - **Standard:** Jetton (Fungible)  
 - **Decimals:** 9  
 - **Total Supply:** 21,000,000 T21  
