@@ -11,6 +11,18 @@ Created for community growth, games, and DeFi on TON. 🚀
 
 ---
 
+## 📑 Table of Contents
+- [📄 WhitePaper v3 (Final)](#-whitepaper-v3-final)
+- [📊 Tokenomics](#-tokenomics)
+- [📜 Contract](#-contract)
+- [👥 Community](#-community)
+- [🇬🇧 About the Project](#-about-the-project)
+- [🇷🇺 О проекте](#-о-проекте)
+- [🇨🇳 关于项目](#-关于项目)
+- [🗂️ Archived Versions](#️-archived-versions)
+
+---
+
 ## 📄 WhitePaper v3 (Final)
 - [English Version (PDF)](Ton21_WhitePaper_v3_EN.pdf)  
 - [Русская версия (PDF)](Ton21_WhitePaper_v3_RU.pdf)  
@@ -20,6 +32,15 @@ Created for community growth, games, and DeFi on TON. 🚀
 
 ## 📊 Tokenomics
 - [T21 Tokenomics v3 (RU/EN)](T21_Tokenomics_v3.md)
+
+---
+
+## 📜 Contract
+- **Address:** `EQBLgiPMLy98ZIMGqauqdX0Fe_N01arD-Lh1KSfxBd8rzYRG`  
+- **Standard:** Jetton (Fungible)  
+- **Decimals:** 9  
+- **Total Supply:** 21,000,000 T21  
+- **Blockchain:** TON (The Open Network)  
 
 ---
 
