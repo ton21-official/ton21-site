@@ -7,7 +7,7 @@
 This is the official website repository for **Ton21 (T21)** — a community-driven token on the TON blockchain with a strictly limited supply of **21,000,000 T21**.  
 Created for community growth, games, and DeFi on TON. 🚀
 
-👉 Website: [vladimirvle.github.io/ton21-site](https://vladimirvle.github.io/ton21-site/)
+👉 Website: [ton21-official.github.io/ton21-site](https://ton21-official.github.io/ton21-site/)
 
 ---
 
