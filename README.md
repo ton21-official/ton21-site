@@ -7,25 +7,19 @@
 This is the official website repository for **Ton21 (T21)** — a community-driven token on the TON blockchain with a strictly limited supply of **21,000,000 T21**.  
 Created for community growth, games, and DeFi on TON. 🚀
 
-👉 Website: [ton21-official.github.io/ton21-site](https://ton21-official.github.io/ton21-site)
+👉 Website: [ton21-official.github.io/ton21-site](https://ton21-official.github.io/ton21-site/)
 
 ---
 
 ## 📄 WhitePaper v3 (Final)
 - [English Version (PDF)](Ton21_WhitePaper_v3_EN.pdf)  
 - [Русская версия (PDF)](Ton21_WhitePaper_v3_RU.pdf)  
-- [中文版 (PDF)](Ton21_WhitePaper_v3_CN.pdf)
+- [中文版 (PDF)](Ton21_WhitePaper_v3_CN.pdf)  
 
 ---
 
 ## 📊 Tokenomics
-- [T21 Tokenomics v3 (RU/EN)](T21_Tokenomics_v3.md)
-
----
-
-## 🔑 Contract
-**Jetton Contract Address:**  
-`EQBLgiPMly98ZlMGqa...LhIKSfx8d8rzYRG`
+- [T21 Tokenomics v3 (RU/EN)](https://github.com/ton21-official/ton21_official/blob/main/T21_Tokenomics_v3.md)
 
 ---
 
@@ -36,22 +30,14 @@ Created for community growth, games, and DeFi on TON. 🚀
 
 ---
 
-## 🇬🇧 About the Project
-**Ton21 (T21)** is a community-driven token on the TON blockchain with a strictly limited supply of **21,000,000 T21**.  
-Created to support community growth, games, and DeFi on TON.
-
----
-
 ## 🇷🇺 О проекте
 **Ton21 (T21)** — это токен сообщества на блокчейне TON с ограниченной эмиссией **21,000,000 T21**.  
-Создан для развития сообщества, игр и DeFi на TON.
+Создан для развития сообщества, игр и DeFi на TON. 🚀
+
+📄 Документы:  
+- [WhitePaper v3 (RU/EN/CN)](Ton21_WhitePaper_v3_EN.pdf)  
+- [Токеномика v3 (RU/EN)](https://github.com/ton21-official/ton21_official/blob/main/T21_Tokenomics_v3.md)
 
 ---
 
-## 🇨🇳 项目简介
-**Ton21 (T21)** 是一个基于 TON 区块链的社区驱动型代币，总量固定为 **21,000,000 T21**。  
-旨在推动社区发展、游戏以及 TON 上的 DeFi 生态。
-
----
-
-❤️ Built with love by the Ton21 Team
+❤️ Built with love by the Ton21 Team.
