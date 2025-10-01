@@ -7,26 +7,14 @@
 This is the official website repository for **Ton21 (T21)** — a community-driven token on the TON blockchain with a strictly limited supply of **21,000,000 T21**.  
 Created for community growth, games, and DeFi on TON. 🚀
 
-👉 Website: [ton21-official.github.io/ton21-site](https://ton21-official.github.io/ton21-site/)
-
----
-
-## 📑 Table of Contents
-- [📄 WhitePaper v3 (Final)](#-whitepaper-v3-final)
-- [📊 Tokenomics](#-tokenomics)
-- [📜 Contract](#-contract)
-- [👥 Community](#-community)
-- [🇬🇧 About the Project](#-about-the-project)
-- [🇷🇺 О проекте](#-о-проекте)
-- [🇨🇳 关于项目](#-关于项目)
-- [🗂️ Archived Versions](#️-archived-versions)
+👉 Website: [ton21-official.github.io/ton21-site](https://ton21-official.github.io/ton21-site)
 
 ---
 
 ## 📄 WhitePaper v3 (Final)
 - [English Version (PDF)](Ton21_WhitePaper_v3_EN.pdf)  
 - [Русская версия (PDF)](Ton21_WhitePaper_v3_RU.pdf)  
-- [中文版本 (PDF)](Ton21_WhitePaper_v3_CN.pdf)  
+- [中文版 (PDF)](Ton21_WhitePaper_v3_CN.pdf)
 
 ---
 
@@ -35,25 +23,22 @@ Created for community growth, games, and DeFi on TON. 🚀
 
 ---
 
-## 📜 Contract
-- **Address:** `EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG`  
-- **Standard:** Jetton (Fungible)  
-- **Decimals:** 9  
-- **Total Supply:** 21,000,000 T21  
-- **Blockchain:** TON (The Open Network)  
+## 🔑 Contract
+**Jetton Contract Address:**  
+`EQBLgiPMly98ZlMGqa...LhIKSfx8d8rzYRG`
 
 ---
 
 ## 👥 Community
 - Telegram: [Ton21 Army (Official)](https://t.me/Ton21_Army)  
 - Twitter (X): [Ton21 Official](https://twitter.com/Ton21Official)  
-- Discord: [Join Discord](https://discord.gg/me2kuT9Pq)  
+- Discord: [Join Discord](https://discord.gg/me2kuT9Pq)
 
 ---
 
 ## 🇬🇧 About the Project
-**Ton21 (T21)** is a community-driven token on the TON blockchain with a limited supply of **21,000,000 T21**.  
-It was created to support community growth, gaming, and DeFi on TON.
+**Ton21 (T21)** is a community-driven token on the TON blockchain with a strictly limited supply of **21,000,000 T21**.  
+Created to support community growth, games, and DeFi on TON.
 
 ---
 
@@ -63,15 +48,9 @@ It was created to support community growth, gaming, and DeFi on TON.
 
 ---
 
-## 🇨🇳 关于项目
-**Ton21 (T21)** 是一个基于 TON 区块链的社区驱动型代币，总供应量为 **21,000,000 T21**。  
-它旨在支持社区发展、游戏和 TON 上的 DeFi。
-
----
-
-## 🗂️ Archived Versions
-- [T21 WhitePaper v2 (PDF)](archive/T21_WhitePaper_v2.pdf)  
-- [T21 WhitePaper v3 Polished (Draft, RU/EN)](archive/T21_WhitePaper_v3_polished.md)  
+## 🇨🇳 项目简介
+**Ton21 (T21)** 是一个基于 TON 区块链的社区驱动型代币，总量固定为 **21,000,000 T21**。  
+旨在推动社区发展、游戏以及 TON 上的 DeFi 生态。
 
 ---
 
