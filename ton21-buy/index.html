@@ -64,7 +64,7 @@
 
     function copyContract() {
       navigator.clipboard.writeText(contractAddress)
-        .then(() => alert('✅ Адрес скопирован!'))
+        .then(() => alert('✅ Адрес скопирован в буфер обмена!'))
         .catch(() => alert('❌ Ошибка копирования'));
     }
 
@@ -76,12 +76,14 @@
           <li>Установи кошелёк <b>Tonkeeper</b> или <b>Wallet</b>.</li>
           <li>Пополни баланс TON (например, через биржу).</li>
           <li>Перейди на <a href="https://dedust.io/swap/TON/Ton21" target="_blank">DeDust.io</a> или <a href="https://app.ston.fi" target="_blank">STON.fi</a>.</li>
+          <li>Если токен <b>Ton21</b> не отображается — добавь вручную этот контракт:</li>
+          <p style="word-wrap:break-word;color:#4a90e2;">${contractAddress}</p>
+          <button onclick="copyContract()">📋 Скопировать адрес контракта</button>
           <li>Выбери токен <b>Ton21 (T21)</b> и нажми «Swap».</li>
           <li>Подтверди транзакцию в кошельке.</li>
         </ol>
         <button onclick="window.open('https://dedust.io/swap/TON/Ton21','_blank')">🪙 Купить через DeDust</button>
         <button onclick="window.open('https://app.ston.fi','_blank')">💎 Купить через STON.fi</button>
-        <button onclick="copyContract()">📋 Скопировать адрес контракта</button>
         <p style="margin-top:20px;color:#999;">Ton21 Official • Powered by The Open Network</p>
       `,
       en: `
@@ -91,12 +93,14 @@
           <li>Install <b>Tonkeeper</b> or <b>Wallet</b>.</li>
           <li>Top up your TON balance (for example, from an exchange).</li>
           <li>Go to <a href="https://dedust.io/swap/TON/Ton21" target="_blank">DeDust.io</a> or <a href="https://app.ston.fi" target="_blank">STON.fi</a>.</li>
+          <li>If Ton21 token doesn’t appear — add this contract manually:</li>
+          <p style="word-wrap:break-word;color:#4a90e2;">${contractAddress}</p>
+          <button onclick="copyContract()">📋 Copy Contract Address</button>
           <li>Select <b>Ton21 (T21)</b> and click “Swap”.</li>
           <li>Confirm the transaction in your wallet.</li>
         </ol>
         <button onclick="window.open('https://dedust.io/swap/TON/Ton21','_blank')">🪙 Buy via DeDust</button>
         <button onclick="window.open('https://app.ston.fi','_blank')">💎 Buy via STON.fi</button>
-        <button onclick="copyContract()">📋 Copy Contract Address</button>
         <p style="margin-top:20px;color:#999;">Ton21 Official • Powered by The Open Network</p>
       `,
       cn: `
@@ -106,12 +110,14 @@
           <li>安装 <b>Tonkeeper</b> 或 <b>Wallet</b> 钱包。</li>
           <li>充值 TON 余额（例如通过交易所）。</li>
           <li>前往 <a href="https://dedust.io/swap/TON/Ton21" target="_blank">DeDust.io</a> 或 <a href="https://app.ston.fi" target="_blank">STON.fi</a>。</li>
-          <li>选择代币 <b>Ton21 (T21)</b> 并点击 “Swap”。</li>
+          <li>如果未显示 Ton21，请手动添加以下合约地址：</li>
+          <p style="word-wrap:break-word;color:#4a90e2;">${contractAddress}</p>
+          <button onclick="copyContract()">📋 复制合约地址</button>
+          <li>选择 <b>Ton21 (T21)</b> 并点击 “Swap”。</li>
           <li>在钱包中确认交易。</li>
         </ol>
         <button onclick="window.open('https://dedust.io/swap/TON/Ton21','_blank')">🪙 通过 DeDust 购买</button>
         <button onclick="window.open('https://app.ston.fi','_blank')">💎 通过 STON.fi 购买</button>
-        <button onclick="copyContract()">📋 复制合约地址</button>
         <p style="margin-top:20px;color:#999;">Ton21 官方 • 由 The Open Network 提供支持</p>
       `
     };
