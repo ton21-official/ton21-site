@@ -26,25 +26,103 @@
       border-radius:10px;
       font-size:16px;
       text-decoration:none;
+      cursor:pointer;
+    }
+    .lang-bar {
+      margin-bottom:20px;
+    }
+    .lang-btn {
+      background:#222;
+      color:#aaa;
+      border:1px solid #4a90e2;
+      font-size:14px;
+      width:auto;
+      display:inline-block;
+      padding:6px 12px;
+      border-radius:6px;
+      margin:3px;
+      cursor:pointer;
+    }
+    .lang-btn:hover {
+      background:#4a90e2;
+      color:#fff;
     }
   </style>
 </head>
 <body>
-  <h2>💎 Как купить Ton21 (T21)</h2>
-  <p>Ton21 — токен сообщества на блокчейне TON.<br>Эмиссия: 21,000,000 T21.</p>
+  <!-- Панель языков сверху -->
+  <div class="lang-bar">
+    <span class="lang-btn" onclick="setLang('ru')">🇷🇺 Русский</span>
+    <span class="lang-btn" onclick="setLang('en')">🇬🇧 English</span>
+    <span class="lang-btn" onclick="setLang('cn')">🇨🇳 中文</span>
+  </div>
 
-  <ol style="text-align:left;">
-    <li>Установи кошелёк <b>Tonkeeper</b> или <b>Wallet</b>.</li>
-    <li>Пополни баланс TON (например, через биржу).</li>
-    <li>Перейди на <a href="https://dedust.io/swap/TON/Ton21" target="_blank">DeDust.io</a> или <a href="https://app.ston.fi" target="_blank">STON.fi</a>.</li>
-    <li>Выбери токен <b>Ton21 (T21)</b> и нажми «Swap».</li>
-    <li>Подтверди транзакцию в кошельке.</li>
-  </ol>
+  <div id="content"></div>
 
-  <button onclick="window.open('https://dedust.io/swap/TON/Ton21','_blank')">🪙 Купить через DeDust</button>
-  <button onclick="window.open('https://app.ston.fi','_blank')">💎 Купить через STON.fi</button>
-  <button onclick="alert('📜 Контракт Ton21: EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG');">📜 Показать адрес контракта</button>
+  <script>
+    const contractAddress = "EQBLgiPMly982IMGqauqdX0Fe_N01arD-LhlKSfxBd8rzYRG";
 
-  <p style="margin-top:20px;color:#999;">Ton21 Official • Powered by The Open Network</p>
+    function copyContract() {
+      navigator.clipboard.writeText(contractAddress)
+        .then(() => alert('✅ Адрес скопирован!'))
+        .catch(() => alert('❌ Ошибка копирования'));
+    }
+
+    const texts = {
+      ru: `
+        <h2>💎 Как купить Ton21 (T21)</h2>
+        <p>Ton21 — токен сообщества на блокчейне TON.<br>Эмиссия: 21,000,000 T21.</p>
+        <ol style="text-align:left;">
+          <li>Установи кошелёк <b>Tonkeeper</b> или <b>Wallet</b>.</li>
+          <li>Пополни баланс TON (например, через биржу).</li>
+          <li>Перейди на <a href="https://dedust.io/swap/TON/Ton21" target="_blank">DeDust.io</a> или <a href="https://app.ston.fi" target="_blank">STON.fi</a>.</li>
+          <li>Выбери токен <b>Ton21 (T21)</b> и нажми «Swap».</li>
+          <li>Подтверди транзакцию в кошельке.</li>
+        </ol>
+        <button onclick="window.open('https://dedust.io/swap/TON/Ton21','_blank')">🪙 Купить через DeDust</button>
+        <button onclick="window.open('https://app.ston.fi','_blank')">💎 Купить через STON.fi</button>
+        <button onclick="copyContract()">📋 Скопировать адрес контракта</button>
+        <p style="margin-top:20px;color:#999;">Ton21 Official • Powered by The Open Network</p>
+      `,
+      en: `
+        <h2>💎 How to Buy Ton21 (T21)</h2>
+        <p>Ton21 is a community token on the TON blockchain.<br>Total supply: 21,000,000 T21.</p>
+        <ol style="text-align:left;">
+          <li>Install <b>Tonkeeper</b> or <b>Wallet</b>.</li>
+          <li>Top up your TON balance (for example, from an exchange).</li>
+          <li>Go to <a href="https://dedust.io/swap/TON/Ton21" target="_blank">DeDust.io</a> or <a href="https://app.ston.fi" target="_blank">STON.fi</a>.</li>
+          <li>Select <b>Ton21 (T21)</b> and click “Swap”.</li>
+          <li>Confirm the transaction in your wallet.</li>
+        </ol>
+        <button onclick="window.open('https://dedust.io/swap/TON/Ton21','_blank')">🪙 Buy via DeDust</button>
+        <button onclick="window.open('https://app.ston.fi','_blank')">💎 Buy via STON.fi</button>
+        <button onclick="copyContract()">📋 Copy Contract Address</button>
+        <p style="margin-top:20px;color:#999;">Ton21 Official • Powered by The Open Network</p>
+      `,
+      cn: `
+        <h2>💎 如何购买 Ton21 (T21)</h2>
+        <p>Ton21 是 TON 区块链上的社区代币。<br>总发行量：21,000,000 T21。</p>
+        <ol style="text-align:left;">
+          <li>安装 <b>Tonkeeper</b> 或 <b>Wallet</b> 钱包。</li>
+          <li>充值 TON 余额（例如通过交易所）。</li>
+          <li>前往 <a href="https://dedust.io/swap/TON/Ton21" target="_blank">DeDust.io</a> 或 <a href="https://app.ston.fi" target="_blank">STON.fi</a>。</li>
+          <li>选择代币 <b>Ton21 (T21)</b> 并点击 “Swap”。</li>
+          <li>在钱包中确认交易。</li>
+        </ol>
+        <button onclick="window.open('https://dedust.io/swap/TON/Ton21','_blank')">🪙 通过 DeDust 购买</button>
+        <button onclick="window.open('https://app.ston.fi','_blank')">💎 通过 STON.fi 购买</button>
+        <button onclick="copyContract()">📋 复制合约地址</button>
+        <p style="margin-top:20px;color:#999;">Ton21 官方 • 由 The Open Network 提供支持</p>
+      `
+    };
+
+    function setLang(lang) {
+      document.getElementById("content").innerHTML = texts[lang];
+      localStorage.setItem("lang", lang);
+    }
+
+    const savedLang = localStorage.getItem("lang") || "ru";
+    setLang(savedLang);
+  </script>
 </body>
 </html>
